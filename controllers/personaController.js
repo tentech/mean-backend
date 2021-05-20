@@ -11,6 +11,7 @@ personaController.obtenerPersonas = async (req, res) => {
 };
 
 personaController.crearPersona = async (req, res) => {
+    delete req.body._id;
     const persona =  new Persona(req.body);
     console.log(persona);
     await persona.save();

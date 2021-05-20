@@ -3,7 +3,7 @@ const Ciudad = require("../models/ciudad");
 
 
 ciudadController.obtenerCiudadesByProvincia= async (req, res) => {
-    const ciudades = await Ciudad.findOne({"provincia":req.params.provincia});
+    const ciudades = await Ciudad.find({"provincia":req.params.provincia});
     console.log(ciudades);
     res.json(ciudades);
 };
